@@ -16,8 +16,10 @@ public class Taches {
     private String description;
     private Date dateDebut;
     private Date dateFin;
-    private String statut;
-    private String priorite;
+    @Enumerated(EnumType.STRING)
+    private Statut statut;
+    @Enumerated(EnumType.STRING)
+    private Priorite priorite;
 
     @ManyToOne
     @JoinColumn(name = "projet_id")
@@ -34,18 +36,7 @@ public class Taches {
     public Taches() {
     }
 
-    public Taches(Long id, String nom, String description, Date dateDebut, Date dateFin, String statut, String priorite, Projet projet) {
-        this.id = id;
-        this.nom = nom;
-        this.description = description;
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
-        this.statut = statut;
-        this.priorite = priorite;
-        this.projet = projet;
-    }
-
-    public Taches(Long id, String nom, String description, Date dateDebut, Date dateFin, String statut, String priorite, Projet projet, List<DependanceTaches> dependancesPrecedentes, List<DependanceTaches> dependancesSuivantes) {
+    public Taches(Long id, String nom, String description, Date dateDebut, Date dateFin, Statut statut, Priorite priorite, Projet projet, List<DependanceTaches> dependancesPrecedentes, List<DependanceTaches> dependancesSuivantes) {
         this.id = id;
         this.nom = nom;
         this.description = description;
@@ -98,19 +89,19 @@ public class Taches {
         this.dateFin = dateFin;
     }
 
-    public String getStatut() {
+    public Statut getStatut() {
         return statut;
     }
 
-    public void setStatut(String statut) {
+    public void setStatut(Statut statut) {
         this.statut = statut;
     }
 
-    public String getPriorite() {
+    public Priorite getPriorite() {
         return priorite;
     }
 
-    public void setPriorite(String priorite) {
+    public void setPriorite(Priorite priorite) {
         this.priorite = priorite;
     }
 
