@@ -16,7 +16,9 @@ public class Projet {
     private String description;
     private Date dateDebut;
     private Date dateFin;
-    private String statut;
+
+    @Enumerated(EnumType.STRING)
+    private Statut statut;
 
     @ManyToOne
     @JoinColumn(name = "equipe_id")
@@ -28,17 +30,8 @@ public class Projet {
     public Projet() {
     }
 
-    public Projet(Long id, String nom, String description, Date dateDebut, Date dateFin, String statut, Equipe equipe) {
-        this.id = id;
-        this.nom = nom;
-        this.description = description;
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
-        this.statut = statut;
-        this.equipe = equipe;
-    }
 
-    public Projet(Long id, String nom, String description, Date dateDebut, Date dateFin, String statut, Equipe equipe, List<Taches> taches) {
+    public Projet(Long id, String nom, String description, Date dateDebut, Date dateFin, Statut statut, Equipe equipe, List<Taches> taches) {
         this.id = id;
         this.nom = nom;
         this.description = description;
@@ -89,11 +82,11 @@ public class Projet {
         this.dateFin = dateFin;
     }
 
-    public String getStatut() {
+    public Statut getStatut() {
         return statut;
     }
 
-    public void setStatut(String statut) {
+    public void setStatut(Statut statut) {
         this.statut = statut;
     }
 
