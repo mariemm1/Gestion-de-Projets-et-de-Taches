@@ -1,6 +1,8 @@
 package org.example.suividestaches.models;
 
 import jakarta.persistence.*;
+import org.example.suividestaches.models.Enum.Priorite;
+import org.example.suividestaches.models.Enum.Statut;
 
 import java.util.Date;
 import java.util.List;
@@ -9,13 +11,14 @@ import java.util.List;
 public class Taches {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nom;
     private String description;
     private Date dateDebut;
     private Date dateFin;
+    //private Float temps_estime;
     @Enumerated(EnumType.STRING)
     private Statut statut;
     @Enumerated(EnumType.STRING)

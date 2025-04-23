@@ -1,4 +1,4 @@
-package org.example.suividestaches.models;
+package org.example.suividestaches.models.Enum;
 
 public enum Priorite {
     FORTE,

@@ -1,6 +1,8 @@
 package org.example.suividestaches.models;
 
 import jakarta.persistence.*;
+import org.example.suividestaches.models.Enum.PostMembre;
+import org.example.suividestaches.models.Enum.Role;
 
 import java.util.List;
 @Entity
@@ -26,8 +28,8 @@ public class Membre extends User{
         this.equipe = equipe;
     }
 
-    public Membre(Long id, String nom, String email, List<Notifications> notifications, String pwd, Disponibilite disponibilite, List<String> competences, PostMembre postMembre, Equipe equipe) {
-        super(id, nom, email, notifications, pwd, disponibilite);
+    public Membre(Long id, String nom, String prenom, String email, String pwd, Role role, List<Notifications> notifications, List<Conge> conges, List<String> competences, PostMembre postMembre, Equipe equipe) {
+        super(id, nom, prenom, email, pwd, role, notifications, conges);
         this.competences = competences;
         this.postMembre = postMembre;
         this.equipe = equipe;

@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class DependanceTaches {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     // Référence à la tâche précédente
