@@ -1,6 +1,7 @@
 package org.example.suividestaches.models;
 
 import jakarta.persistence.*;
+import org.example.suividestaches.models.Enum.Statut;
 
 import java.util.Date;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 public class Projet {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nom;

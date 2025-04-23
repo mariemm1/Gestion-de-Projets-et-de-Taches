@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
+import org.example.suividestaches.models.Enum.Role;
 
 import java.util.List;
 
@@ -21,8 +22,8 @@ public class ChefDequipe extends User {
         this.equipe = equipe;
     }
 
-    public ChefDequipe(Long id, String nom, String email, List<Notifications> notifications, String pwd, Disponibilite disponibilite, Equipe equipe) {
-        super(id, nom, email, notifications, pwd, disponibilite);
+    public ChefDequipe(Long id, String nom, String prenom, String email, String pwd, Role role, List<Notifications> notifications, List<Conge> conges, Equipe equipe) {
+        super(id, nom, prenom, email, pwd, role, notifications, conges);
         this.equipe = equipe;
     }
 

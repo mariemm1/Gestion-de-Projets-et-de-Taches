@@ -1,36 +1,44 @@
 package org.example.suividestaches.models;
 
 import jakarta.persistence.*;
+import org.example.suividestaches.models.Enum.Role;
 
 import java.util.List;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
+    private String prenom;
     private String email;
     private String pwd;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Notifications> notifications;
 
-    @OneToOne(mappedBy = "user")
-    private Disponibilite disponibilite;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Conge> conges;
+
 
     public User() {
     }
 
-    public User(Long id, String nom, String email, List<Notifications> notifications, String pwd, Disponibilite disponibilite) {
+    public User(Long id, String nom, String prenom, String email, String pwd, Role role, List<Notifications> notifications, List<Conge> conges) {
         this.id = id;
         this.nom = nom;
+        this.prenom = prenom;
         this.email = email;
-        this.notifications = notifications;
         this.pwd = pwd;
-        this.disponibilite = disponibilite;
+        this.role = role;
+        this.notifications = notifications;
+        this.conges = conges;
     }
 
     public Long getId() {
@@ -47,6 +55,14 @@ public class User {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
     public String getEmail() {
@@ -66,6 +82,13 @@ public class User {
     }
 
 
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
     public List<Notifications> getNotifications() {
         return notifications;
@@ -75,11 +98,11 @@ public class User {
         this.notifications = notifications;
     }
 
-    public Disponibilite getDisponibilite() {
-        return disponibilite;
+    public List<Conge> getConges() {
+        return conges;
     }
 
-    public void setDisponibilite(Disponibilite disponibilite) {
-        this.disponibilite = disponibilite;
+    public void setConges(List<Conge> conges) {
+        this.conges = conges;
     }
 }
