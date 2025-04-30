@@ -1,0 +1,153 @@
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+data-sidebar-position="fixed" data-header-position="fixed">
+ <!-- Sidebar Start -->
+ <aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div>
+      <div class="brand-logo d-flex align-items-center justify-content-between">
+        <a href="./index.html" class="text-nowrap logo-img">
+          <img src="../images/logos/1.png" width="180" alt="" />
+        </a>
+        <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+          <i class="ti ti-x fs-8"></i>
+        </div>
+      </div>
+      <!-- Sidebar navigation-->
+      <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+        <ul id="sidebarnav">
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu">Home</span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="./dashbord" routerLink="/dashbord" aria-expanded="false">
+              <span>
+                <i class="fas fa-tachometer-alt"></i>  <!-- Icône FontAwesome -->
+              </span>
+              <span class="hide-menu">Dashboard</span>
+            </a>
+          </li>
+          
+          
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="/user">
+              <span>
+                <i class="bi bi-person fs-4"></i> <!-- Icône utilisateur -->
+              </span>
+              <span class="hide-menu">User</span>
+            </a>
+          </li>
+          
+          
+          
+          
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="bi bi-briefcase fs-4"></i> <!-- Icône de projet -->
+              </span>
+              <span class="hide-menu">Project</span>
+            </a>
+            <!-- Dropdown pour Project -->
+            <ul class="dropdown-menu" aria-labelledby="projectDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="bi bi-plus-circle"></i> Add Project
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="bi bi-trash"></i> Delete Project
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="bi bi-pencil-square"></i> Update Project
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#" aria-expanded="false">
+              <span>
+                <i class="bi bi-people-fill fs-4"></i> <!-- Icône pour Equipe -->
+              </span>
+              <span class="hide-menu">Equipe</span>
+            </a>
+            <!-- Dropdown pour Equipe -->
+            <ul class="dropdown-menu" aria-labelledby="equipeDropdown">
+              <li>
+                <a class="dropdown-item" [routerLink]="'/add-Equipe'">
+                  <i class="bi bi-plus-circle"></i> add Equipe
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/edit-equipe">
+                  <i class="bi bi-pencil-square"></i> Modifier une Equipe
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/delete-equipe">
+                  <i class="bi bi-trash"></i> Supprimer une Equipe
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+              <span>
+                <i class="ti ti-cards"></i>
+              </span>
+              <span class="hide-menu">Card</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
+              <span>
+                <i class="ti ti-file-description"></i>
+              </span>
+              <span class="hide-menu">Forms</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
+              <span>
+                <i class="ti ti-typography"></i>
+              </span>
+              <span class="hide-menu">Typography</span>
+            </a>
+          </li>
+          <li class="nav-small-cap">
+            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+            <span class="hide-menu">AUTH</span>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" [routerLink]="'/login'" aria-expanded="false">
+              <span>
+                <i class="ti ti-login"></i>
+              </span>
+              <span class="hide-menu">Login</span>
+            </a>
+          </li>
+          
+          
+          <li class="sidebar-item">
+            <a class="sidebar-link" [routerLink]="'/register'" aria-expanded="false">
+              <span>
+                <i class="ti ti-user-plus"></i>
+              </span>
+              <span class="hide-menu">Register</span>
+            </a>
+          </li>
+      
+        
+        </ul>
+        
+      </nav>
+      <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+  </aside>
+  <!--  Sidebar End -->
+  
