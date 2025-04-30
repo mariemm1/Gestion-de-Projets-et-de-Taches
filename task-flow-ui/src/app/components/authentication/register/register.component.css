@@ -1,0 +1,36 @@
+/* Réduire la taille du bouton Sign Up */
+.btn.btn-primary {
+    font-size: 14px;  /* Taille plus petite */
+    padding: 10px 20px;  /* Ajuster la taille du padding */
+    border-radius: 8px;  /* Bordure plus douce */
+    width: auto;  /* Ajuster la largeur automatiquement */
+    margin-bottom: 10px;  /* Espace en bas */
+  }
+  
+  /* Pour aligner "Already have an Account?" et "Sign In" sur la même ligne */
+  .d-flex.align-items-center.justify-content-center {
+    display: flex;
+    align-items: center;  /* Aligner verticalement */
+    justify-content: center;  /* Centrer horizontalement */
+    gap: 5px;  /* Ajouter un petit écart entre le texte et le lien */
+  }
+  
+  /* Ajuster la taille du texte "Already have an Account?" */
+  .d-flex.align-items-center p {
+    font-size: 12px;  /* Taille plus petite */
+    font-weight: normal;  /* Enlever le gras */
+    margin-bottom: 0;  /* Retirer la marge en bas */
+  }
+  
+  /* Ajuster la taille et la couleur du lien "Sign In" */
+  .text-primary.fw-bold.ms-2 {
+    font-size: 12px;  /* Taille plus petite pour le lien */
+    font-weight: normal;  /* Enlever le gras */
+    text-decoration: none;  /* Enlever le soulignement */
+  }
+  
+  /* Ajouter un effet au survol du lien "Sign In" */
+  .text-primary.fw-bold.ms-2:hover {
+    text-decoration: underline;  /* Souligner au survol */
+  }
+  

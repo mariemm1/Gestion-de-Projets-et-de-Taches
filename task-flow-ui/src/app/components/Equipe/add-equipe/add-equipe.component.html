@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Ajouter une Équipe</h2>
+    <form (ngSubmit)="onSubmit()" #equipeForm="ngForm">
+      <div class="form-group">
+        <label for="nom">Nom de l'équipe</label>
+        <input
+          type="text"
+          id="nom"
+          class="form-control"
+          [(ngModel)]="equipe.nom"
+          name="nom"
+          required
+          placeholder="Entrez le nom de l'équipe"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description de l'équipe</label>
+        <textarea
+          id="description"
+          class="form-control"
+          [(ngModel)]="equipe.description"
+          name="description"
+          required
+          placeholder="Entrez la description de l'équipe"
+        ></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="!equipeForm.form.valid">
+        Ajouter 
+      </button>
+    </form>
+  </div>
+  
