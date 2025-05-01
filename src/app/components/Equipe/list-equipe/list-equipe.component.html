@@ -1,0 +1,49 @@
+<div class="container-fluid pt-6 pb-6">
+    <div class="container pt-4">
+        <!-- Bouton Ajouter placé en haut -->
+        <div class="d-flex justify-content-end mb-4">
+            <a class="btn btn-success text-uppercase" (click)="onAddEquipe()">
+                <i class="bi bi-plus-circle pe-2"></i> Ajouter
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pt-6 pb-6">
+    <div class="container pt-4">
+        <div class="row g-0 feature-row">
+            <!-- Boucle pour afficher toutes les équipes -->
+            <div *ngFor="let equipe of equipes" class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <div class="feature-item border h-100">
+                    <div class="feature-icon btn-xxl-square bg-primary mb-4 mt-n4">
+                        <i class="fa fa-users fa-2x text-white"></i>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <h5 class="text-uppercase mb-3">{{ equipe.nom }}</h5>
+                        <p>{{ equipe.description }}</p>
+                        <p><strong>Chef d'équipe:</strong> {{ equipe?.chefDequipe?.nom }} {{ equipe?.chefDequipe?.prenom }}</p>
+
+                        <!-- Boutons pour consulter, éditer et supprimer -->
+                        <div class="d-flex justify-content-between">
+                            <!-- Lien consulter -->
+                            <a class="text-body text-uppercase small" href="#" >
+                                <i class="bi bi-eye pe-2"></i> 
+                            </a>
+
+                            <!-- Lien éditer -->
+                            <a class="text-body text-uppercase small" href="#">
+                                <i class="bi bi-pencil-square pe-2"></i> 
+                            </a>
+
+                            <!-- Lien supprimer -->
+                            <a class="text-body text-uppercase small" href="#">
+                                <i class="bi bi-trash pe-2"></i> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin boucle -->
+        </div>
+    </div>
+</div>
+<!-- Features End -->

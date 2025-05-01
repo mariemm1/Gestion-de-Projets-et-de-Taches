@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Créer une Équipe</h5>
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom de l'équipe</label>
+            <input type="text" class="form-control" id="nom" [(ngModel)]="equipe.nom" name="nom" required>
+          </div>
+  
+          <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" [(ngModel)]="equipe.description" name="description"></textarea>
+          </div>
+  
+          <div class="mb-3">
+            <label for="chef" class="form-label">Chef d'équipe</label>
+            <select class="form-select" id="chef" [(ngModel)]="equipe.chefDequipe" name="chefDequipe" required>
+              <option *ngFor="let chef of chefs" [ngValue]="chef">
+                {{ chef.nom }} {{ chef.prenom }}
+              </option>
+            </select>
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Créer l'équipe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

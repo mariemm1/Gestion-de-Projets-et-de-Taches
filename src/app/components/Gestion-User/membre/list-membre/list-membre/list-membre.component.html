@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h4 class="fw-bold">Membres</h4>
+  <button class="btn btn-primary" (click)="onAddMembre()">+ Ajouter</button>
+</div>
+
+<div class="list-group">
+  <div 
+    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center rounded shadow-sm mb-3"
+    *ngFor="let membre of membre">
+    
+    <!-- Bloc gauche : image + infos -->
+    <div class="d-flex align-items-center">
+      <!-- Image dynamique générée par UI Avatars -->
+      <img 
+        [src]="'https://ui-avatars.com/api/?name=' + membre.nom + '+' + membre.prenom + '&background=007bff&color=fff&rounded=true&size=60'" 
+        alt="Avatar"
+        class="rounded-circle me-3"
+        width="60"
+        height="60"
+      />
+
+      <div>
+        <h5 class="mb-0">{{ membre.nom }} {{ membre.prenom }}</h5>
+        <small class="text-muted">{{ membre.email }}</small><br />
+        <small><strong>Poste:</strong> {{ membre.postMembre }}</small><br />
+        <small><strong>Équipe:</strong> {{ membre.equipe?.nom || 'Non attribuée' }}</small>
+      </div>
+    </div>
+
+    <!-- Actions (droite) -->
+    <div>
+      <button class="btn btn-sm btn-outline-primary me-2" (click)="goToEdit(membre.id!)" title="Modifier">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button class="btn btn-sm btn-outline-danger" (click)="deleteMembre(membre.id!)" title="Supprimer">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
+</div>

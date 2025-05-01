@@ -1,0 +1,27 @@
+<div class="container-fluid mt-4">
+    <h2 class="mb-4 fw-bold">Liste des Chefs d'Équipe</h2>
+  
+    <div class="row">
+      <div *ngFor="let chef of chefs" class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title">{{ chef.nom }} {{ chef.prenom }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Email : {{ chef.email }}</h6>
+            <p class="card-text">
+              <strong>Rôle :</strong> {{ chef.role }}<br>
+              <strong>Équipe :</strong> {{ chef.equipe?.nom || 'Non assignée' }}
+            </p>
+            <a href="#" class="card-link text-primary" style="cursor: pointer;" (click)="goToEdit(chef.id!)" title="Modifier">
+              <i class="fas fa-edit"></i>
+            </a>
+            <a href="#" class="card-link text-danger me-3" style="cursor: pointer;" (click)="deleteChef(chef.id!)">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+            
+            
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

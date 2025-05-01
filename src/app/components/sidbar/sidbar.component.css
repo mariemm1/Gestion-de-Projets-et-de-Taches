@@ -1,0 +1,148 @@
+/* Enlever le soulignement des liens de la sidebar */
+.sidebar-link {
+    text-decoration: none;
+  }
+  
+  /* Ajouter un soulignement au survol */
+  .sidebar-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Gérer le soulignement uniquement pour les éléments importants (par exemple, sous les éléments actifs) */
+  .sidebar-item.active .sidebar-link {
+    text-decoration: underline;
+  }
+  
+
+  /* S'assurer que le dropdown se montre au clic ou au survol */
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .sidebar-item:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Pour l'icône et le texte */
+  .dropdown-item i {
+    margin-right: 8px;
+  }
+  /* Style de l'élément de la sidebar */
+.sidebar-item {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* Le lien principal de la sidebar */
+.sidebar-item .sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #495057;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Icône et texte */
+.sidebar-item .sidebar-link i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Lors du survol du lien de la sidebar */
+.sidebar-item .sidebar-link:hover {
+  color: #007bff;  /* Changer la couleur du texte seulement au survol */
+}
+
+/* Icône 1 visible par défaut */
+.sidebar-item .sidebar-link .icon1 {
+  display: inline-block;
+}
+
+/* Icône 2 cachée par défaut */
+.sidebar-item .sidebar-link .icon2 {
+  display: none;
+}
+
+/* Lors du survol, cacher l'icône 1 et afficher l'icône 2 */
+.sidebar-item .sidebar-link:hover .icon1 {
+  display: none;
+}
+
+.sidebar-item .sidebar-link:hover .icon2 {
+  display: inline-block;
+}
+
+/* Menu collapsible */
+.collapse {
+  margin-left: 20px;
+  padding-left: 15px;
+  border-left: 2px solid #e9ecef;
+}
+
+/* Sous éléments du menu */
+.nav-collapse {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-collapse li {
+  margin: 10px 0;
+  position: relative;
+}
+
+/* Lien des sous éléments */
+.nav-collapse li a {
+  text-decoration: none;
+  color: #6c757d;
+  padding: 8px 15px;
+  display: block;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Séparation par une ligne entre les éléments */
+.nav-collapse li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: #e9ecef;
+}
+
+/* Flash effect au survol de chaque élément */
+.nav-collapse li a:hover {
+  color: #007bff;  /* La couleur du texte change au survol */
+  transform: scale(1.05); /* Légère animation de mise en valeur */
+  transition: all 0.3s ease;
+}
+
+/* Menu collapsible */
+.collapse.show {
+  display: block !important;
+}
+
+.collapse:not(.show) {
+  display: none !important;
+}
+
+/* Ajouter un espacement au texte dans la sidebar */
+.hide-menu {
+  font-weight: 600;
+}
+
+/* Style de l'icône avec un changement de couleur */
+.sidebar-item .sidebar-link i.bi-person {
+  color: #0c0c0c;
+}
+
+/* Ajout de marges sur l'élément de la sidebar */
+.sidebar-item {
+  margin-top: 20px;
+}

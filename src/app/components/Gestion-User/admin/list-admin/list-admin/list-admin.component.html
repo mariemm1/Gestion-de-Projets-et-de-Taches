@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h3>Liste des Admins</h3>
+    <button class="btn btn-success" (click)="onAddAdmin()">
+        <i class="bi bi-plus-circle"></i> Ajouter un Admin
+    </button>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let admin of admins">
+        <div class="card shadow-lg border-0 rounded-lg custom-card">
+            <div class="card-body">
+                <!-- Icône de profil dans un cercle -->
+                <div class="icon-container">
+                    <i class="bi bi-person-circle fs-1 text-white"></i>
+                </div>
+                <h5 class="card-title text-uppercase font-weight-bold">{{ admin.nom }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ admin.email }}</h6>
+                <p class="card-text">Identifiant: {{ admin.id }}</p>
+                <div class="d-flex justify-content-start align-items-center">
+                    <!-- Modifier et Supprimer alignés plus près l'un de l'autre -->
+                    <a class="card-link text-primary" style="cursor: pointer; margin-right: 10px;" (click)="goToEdit(admin.id!)" title="Modifier">
+                        <i class="fas fa-edit"></i> 
+                    </a>
+                    <a (click)="supprimerAdmin(admin.id)" class="text-danger" style="cursor: pointer;">
+                        <i class="bi bi-trash-fill fs-5"></i> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

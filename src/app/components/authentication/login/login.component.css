@@ -1,0 +1,60 @@
+/* Ajuster la taille et enlever le gras du texte "New to TasKFlow?" */
+.d-flex.align-items-center.justify-content-center p {
+    font-size: 10px;  /* Taille plus petite */
+    font-weight: normal;  /* Retirer le gras */
+    margin-bottom: 0;  /* Enlever la marge en bas */
+    margin-right: 5px;  /* Espacement entre le texte et le lien */
+  }
+  
+  /* Aligner les éléments "New to TasKFlow?" et "Create an account" sur la même ligne */
+  .d-flex.align-items-center.justify-content-center {
+    display: flex;
+    align-items: center;  /* Centre verticalement */
+    gap: 5px;  /* Espace entre les éléments */
+  }
+  
+  /* Ajuster la taille et enlever le gras du lien "Create an account" */
+  .text-primary.fw-bold.ms-2 {
+    font-size: 10px;  /* Taille plus petite pour le lien */
+    font-weight: normal;  /* Retirer le gras */
+  }
+/* Style pour le bouton "Sign In" */
+.btn.btn-primary {
+    display: inline-block;  /* Pour rendre le lien comme un bouton */
+    padding: 6px 12px;  /* Padding plus petit pour réduire la taille */
+    font-size: 12px;  /* Taille de la police plus petite */
+    background-color: #007bff;  /* Couleur de fond du bouton */
+    color: white;  /* Couleur du texte */
+    text-align: center;  /* Centrer le texte */
+    text-decoration: none;  /* Enlever la sous-ligne du lien */
+    border-radius: 20px;  /* Coins arrondis moins prononcés */
+    width: auto;  /* Largeur automatique pour ajuster à la taille du contenu */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Transition fluide */
+    margin-top: 10px;  /* Espacement au-dessus du bouton */
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #0056b3;  /* Couleur du bouton au survol */
+    transform: scale(1.05);  /* Agrandissement légèrement au survol */
+  }
+  
+  .btn.btn-primary:active {
+    background-color: #004085;  /* Couleur du bouton quand il est cliqué */
+    transform: scale(0.98);  /* Réduction légèrement au clic */
+  }
+  
+  /* Taille de la police */
+  .fs-4 {
+    font-size: 1rem;  /* Ajuste la taille du texte */
+  }
+  
+  /* Espacement autour du bouton */
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Arrondir les coins du bouton */
+  .rounded-2 {
+    border-radius: 20px;  /* Coins arrondis légèrement */
+  }
+  

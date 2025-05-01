@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Modifier un Admin</h5>
+        <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+  
+          <!-- Nom -->
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" formControlName="nom" id="nom" class="form-control">
+            <div *ngIf="f['nom'].invalid && submitted" class="text-danger">Nom requis</div>
+          </div>
+  
+          <!-- Prénom -->
+          <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" formControlName="prenom" id="prenom" class="form-control">
+            <div *ngIf="f['prenom'].invalid && submitted" class="text-danger">Prénom requis</div>
+          </div>
+  
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" formControlName="email" id="email" class="form-control">
+            <div *ngIf="f['email'].invalid && submitted" class="text-danger">Email valide requis</div>
+          </div>
+  
+          <!-- Mot de passe -->
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Mot de passe</label>
+            <input type="password" formControlName="pwd" id="pwd" class="form-control">
+            <div *ngIf="f['pwd'].invalid && submitted" class="text-danger">Mot de passe requis</div>
+          </div>
+  
+          <!-- Rôle -->
+          <div class="mb-3">
+            <label for="role" class="form-label">Rôle</label>
+            <input type="text" formControlName="role" id="role" class="form-control">
+        </div>
+  
+          <button type="submit" class="btn btn-primary">Modifier</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

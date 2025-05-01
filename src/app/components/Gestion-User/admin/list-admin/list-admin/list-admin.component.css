@@ -1,0 +1,93 @@
+/* Style pour les cards */
+.card {
+    border-radius: 10px; /* Coins arrondis */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour une meilleure lisibilité avec l'image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Appliquez une image en arrière-plan à la carte */
+.custom-card {
+    background-image: url('https://via.placeholder.com/400x300'); /* Remplacez ceci par l'URL de votre image */
+    background-size: cover; /* L'image couvre toute la carte */
+    background-position: center center; /* Centre l'image */
+    background-repeat: no-repeat;
+}
+
+/* Effet de survol */
+.card:hover {
+    transform: translateY(-5px); /* Élève la carte au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+/* Titre de la carte */
+.card-title {
+    font-size: 18px;
+    color: #fff; /* Couleur claire pour un meilleur contraste sur l'image */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Sous-titre de la carte */
+.card-subtitle {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Texte de la carte */
+.card-text {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Boutons de la carte */
+.card-link {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff; /* Couleur des liens sur le fond */
+}
+
+/* Hover sur les liens de la carte */
+.card-link:hover {
+    color: #007bff;
+}
+
+/* Bouton Ajouter un Admin */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Icône dans un cercle */
+.icon-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Couleur des icônes dans le cercle */
+.icon-container i {
+    color: white;
+    font-size: 36px;
+}
+
+/* Alignement des icônes Modifier et Supprimer plus proches */
+.d-flex a {
+    margin-right: 10px; /* Espacement réduit */
+}

@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Modifier un Membre</h5>
+        <form [formGroup]="membreForm" (ngSubmit)="onSubmit()">
+          
+          <!-- Nom -->
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" id="nom" formControlName="nom" class="form-control" required>
+            <div *ngIf="f['nom'].invalid && submitted" class="text-danger">Le nom est requis.</div>
+          </div>
+  
+          <!-- Prénom -->
+          <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" id="prenom" formControlName="prenom" class="form-control" required>
+            <div *ngIf="f['prenom'].invalid && submitted" class="text-danger">Le prénom est requis.</div>
+          </div>
+  
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" formControlName="email" class="form-control" required>
+            <div *ngIf="f['email'].invalid && submitted" class="text-danger">Email invalide ou manquant.</div>
+          </div>
+  
+          <!-- Mot de passe -->
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Mot de passe</label>
+            <input type="password" id="pwd" formControlName="pwd" class="form-control" required>
+            <div *ngIf="f['pwd'].invalid && submitted" class="text-danger">Le mot de passe est requis.</div>
+          </div>
+  
+          <!-- Sélection du Poste -->
+          <div class="mb-3">
+            <label for="postMembre" class="form-label">Poste</label>
+            <select id="postMembre" formControlName="postMembre" class="form-select">
+              <option value="" disabled>Sélectionnez un poste</option>
+              <option *ngFor="let poste of postes" [value]="poste">{{ poste }}</option>
+            </select>
+          </div>
+  
+          <!-- Sélection de l'Équipe -->
+          <div class="mb-3">
+            <label for="equipe" class="form-label">Équipe</label>
+            <select id="equipe" formControlName="equipe" class="form-select">
+              <option value="" disabled>Sélectionnez une équipe</option>
+              <option *ngFor="let equipe of equipes" [value]="equipe.nom">{{ equipe.nom }}</option>
+            </select>
+            <div *ngIf="f['equipe'].invalid && submitted" class="text-danger">L'équipe est requise.</div>
+          </div>
+  
+          <!-- Bouton de soumission -->
+          <button type="submit" class="btn btn-primary">Mettre à jour</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

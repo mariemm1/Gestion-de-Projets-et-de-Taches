@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title fw-semibold mb-4">Ajouter un Admin</h5>
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" [(ngModel)]="admin.nom" name="nom" class="form-control" id="nom" required>
+          </div>
+  
+          <div class="mb-3">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" [(ngModel)]="admin.prenom" name="prenom" class="form-control" id="prenom" required>
+          </div>
+  
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse Email</label>
+            <input type="email" [(ngModel)]="admin.email" name="email" class="form-control" id="email" required>
+          </div>
+  
+          <div class="mb-3">
+            <label for="pwd" class="form-label">Mot de passe</label>
+            <input type="password" [(ngModel)]="admin.pwd" name="pwd" class="form-control" id="pwd" required>
+          </div>
+  
+          <div class="mb-3">
+            <label class="form-label">Rôle</label>
+            <input type="text" class="form-control" [value]="admin.role" disabled>
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

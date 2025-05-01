@@ -1,0 +1,75 @@
+/* Tableau professionnel */
+.table {
+    border-collapse: collapse; /* Évite les doublons de bordures */
+    width: 100%;
+    background-color: #fff; /* Fond blanc pour un contraste agréable */
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #ddd; /* Bordure légère et claire */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Lignes alternées pour un meilleur contraste */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1; /* Surlignage des lignes lors du survol */
+}
+
+.table-responsive {
+    max-height: 500px; /* Limite la hauteur du tableau et permet de défiler */
+    overflow-y: auto;
+}
+.list-group-item {
+    background: #f8f9fa;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-left: 5px solid #007bff;
+  }
+  
+  .list-group-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-group-item img {
+    border: 2px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-group-item h5 {
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  .list-group-item small {
+    font-size: 0.85rem;
+    color: #6c757d;
+  }
+  
+  .btn-outline-primary, .btn-outline-danger {
+    border-radius: 20px;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  

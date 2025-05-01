@@ -1,0 +1,137 @@
+/* Style général de la section des fonctionnalités */
+.container-fluid.pt-6.pb-6 {
+    background-color: #f8f9fa; /* Fond léger pour la section */
+}
+
+.feature-item {
+    background-color: #ffffff; /* Fond blanc pour chaque élément */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+    margin-bottom: 30px; /* Espace entre les éléments */
+}
+
+/* Animation au survol de l'élément */
+.feature-item:hover {
+    transform: translateY(-5px); /* Légère élévation de l'élément */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Icônes dans la boîte */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #007bff;
+    margin-bottom: 20px;
+}
+
+.feature-icon i {
+    color: #ffffff;
+    font-size: 30px; /* Taille des icônes */
+}
+
+/* Style du texte du titre et de la description */
+h5.text-uppercase {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+}
+
+p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Conteneur des boutons */
+.d-flex.justify-content-between {
+    margin-top: 15px;
+}
+
+/* Style des liens des boutons */
+a.text-body {
+    color: #007bff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+/* Effet de survol pour les liens */
+a.text-body:hover {
+    color: #0056b3;
+    text-decoration: none; /* Enlever le soulignement */
+}
+
+/* Espacement entre les icônes et le texte */
+a.text-body .pe-2 {
+    margin-right: 6px; /* Réduit l'espace entre l'icône et le texte */
+}
+
+/* Styles spécifiques pour chaque bouton */
+a.text-body i.bi-eye {
+    color: #28a745; /* Vert pour l'icône consulter */
+}
+
+a.text-body i.bi-pencil-square {
+    color: #ffc107; /* Jaune pour l'icône modifier */
+}
+
+a.text-body i.bi-trash {
+    color: #dc3545; /* Rouge pour l'icône supprimer */
+}
+
+/* Effet de survol spécifique pour chaque bouton */
+a.text-body i.bi-eye:hover {
+    color: #218838; /* Couleur plus foncée au survol */
+}
+
+a.text-body i.bi-pencil-square:hover {
+    color: #e0a800; /* Couleur plus foncée au survol */
+}
+
+a.text-body i.bi-trash:hover {
+    color: #c82333; /* Couleur plus foncée au survol */
+}
+
+/* Réduction de l'espacement entre les liens (icônes) */
+.d-flex.justify-content-between a {
+    margin-right: 8px; /* Réduit l'espace entre les icônes */
+}
+
+/* Supprime la marge droite du dernier lien pour éviter un espacement supplémentaire */
+.d-flex.justify-content-between a:last-child {
+    margin-right: 0;
+}
+
+/* Optionnel : Réduit l'espacement interne des icônes */
+a.text-body i {
+    margin-right: 4px; /* Réduit l'espace entre l'icône et le texte (si nécessaire) */
+}
+.btn-ajouter-verte {
+    background-color: #28a745; /* Couleur verte */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-ajouter-verte:hover {
+    background-color: #218838; /* Vert plus foncé au survol */
+    transform: translateY(-3px);
+}
+
+.btn-ajouter-verte i {
+    margin-right: 8px;
+    font-size: 20px;
+}

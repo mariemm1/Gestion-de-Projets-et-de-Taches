@@ -1,0 +1,16 @@
+.card-link {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .card-link:hover {
+    color: #dc3545; /* Changer la couleur au survol (rouge) */
+    transform: scale(1.1); /* Agrandir l'icône lors du survol */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Animation fluide */
+  }
+  
+  .card-link:active {
+    color: #c82333; /* Changer la couleur lors du clic (un rouge plus foncé) */
+    transform: scale(1); /* Revenir à la taille normale après le clic */
+  }
+  
