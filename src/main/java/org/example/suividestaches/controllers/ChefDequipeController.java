@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("chefDequipe")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ChefDequipeController {
     @Autowired
     private ChefDequipeService chefDequipeService;

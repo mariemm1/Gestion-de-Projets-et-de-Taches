@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ChefDequipeRepository extends JpaRepository<ChefDequipe,Long> {
+    ChefDequipe findByNom(String nom); // Recherche par nom
+
 }
