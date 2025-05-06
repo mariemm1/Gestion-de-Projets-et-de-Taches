@@ -1,5 +1,7 @@
 package org.example.suividestaches.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.example.suividestaches.models.Enum.PostMembre;
 import org.example.suividestaches.models.Enum.Role;
@@ -14,8 +16,9 @@ public class Membre extends User{
     @Enumerated(EnumType.STRING)
     private PostMembre postMembre;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "equipe_id")
+    @JsonIgnoreProperties("membres")
     private Equipe equipe;
 
     public Membre() {

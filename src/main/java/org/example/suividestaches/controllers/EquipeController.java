@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("equipe")
+@RequestMapping("/equipe")
 public class EquipeController {
     @Autowired
     private EquipeService equipeService;
@@ -25,10 +25,14 @@ public class EquipeController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-
     @PostMapping("/create")
-    public Equipe createEquipe(@RequestBody Equipe equipe) {
-        return equipeService.createEquipe(equipe);
+    public ResponseEntity<Equipe> createEquipeWithChefNom(@RequestBody Equipe equipe, @RequestParam String chefNom) {
+        try {
+            Equipe createdEquipe = equipeService.createEquipeWithChefName(equipe, chefNom);
+            return ResponseEntity.ok(createdEquipe);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(null);
+        }
     }
 
     @PutMapping("/{id}")

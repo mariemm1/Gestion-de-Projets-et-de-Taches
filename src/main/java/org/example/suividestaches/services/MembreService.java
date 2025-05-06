@@ -15,6 +15,9 @@ public class MembreService {
     @Autowired
     private MembreRepository membreRepository;
 
+    @Autowired
+    private EquipeRepository equipeRepository;
+
     public List<Membre> getAllMembres() {
         return membreRepository.findAll();
     }
@@ -23,7 +26,25 @@ public class MembreService {
         return membreRepository.findById(id).orElseThrow(() -> new RuntimeException("Membre not found"));
     }
 
+
+
+
     public Membre createMembre(Membre membre) {
+        // Récupérer l'équipe par son nom
+        Equipe equipe = equipeRepository.findByNom(membre.getEquipe().getNom()).orElse(null);
+
+        // Vérifier si l'équipe existe
+        if (equipe == null) {
+            // Si l'équipe n'existe pas, créer une nouvelle équipe
+            equipe = new Equipe();
+            equipe.setNom(membre.getEquipe().getNom());
+            equipe = equipeRepository.save(equipe); // Sauvegarder la nouvelle équipe
+        }
+
+        // Associer l'équipe au membre
+        membre.setEquipe(equipe);
+
+        // Sauvegarder le membre
         return membreRepository.save(membre);
     }
 
